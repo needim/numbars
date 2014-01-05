@@ -1,0 +1,83 @@
+.numbars {
+	visibility: hidden;
+	width: 300px;
+	height: 5px;
+	line-height: 5px;
+	display: inline-block;
+	position: relative;
+}
+
+.numbars-progress {
+	display: block;
+	height: 100%;
+	width: 10%;
+	position: relative;
+	overflow: visible;
+}
+
+.numbars-num {
+	position: absolute;
+	display: inline-block;
+	left: 5px;
+	top: 0;
+}
+
+.numbars.green {
+	border: 1px solid #89b84c;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.numbars.green .numbars-progress {
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	background-color: rgba(43, 194, 83, 0.7);
+}
+
+.numbars.green .numbars-num {
+	color: #fff;
+	font-weight: bold;
+	text-shadow: -1px 0 #89b84c, 0 1px #89b84c, 1px 0 #89b84c, 0 -1px #89b84c;
+}
+
+.numbars.red {
+	border: 1px solid darkred;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.numbars.red .numbars-progress {
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	background-color: rgba(100, 10, 10, 0.7);
+}
+
+.numbars.red .numbars-num {
+	color: #fff;
+	font-weight: bold;
+	text-shadow: -1px 0 darkred, 0 1px darkred, 1px 0 darkred, 0 -1px darkred;
+}
+
+.numbars.blue {
+	border: 1px solid rgba(0, 150, 212, 1);
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.numbars.blue .numbars-progress {
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	background-color: rgba(0, 150, 212, 0.7);
+}
+
+.numbars.blue .numbars-num {
+	color: #fff;
+	font-weight: bold;
+	text-shadow: -1px 0 rgba(0, 150, 212, 1), 0 1px rgba(0, 150, 212, 1), 1px 0 rgba(0, 150, 212, 1), 0 -1px rgba(0, 150, 212, 1);
+}
