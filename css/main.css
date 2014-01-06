@@ -16,7 +16,7 @@ input,
 select,
 textarea {
     color: #222;
-	font-family: 'Monaco', Helvetica, Arial, sans-serif;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -99,8 +99,7 @@ textarea {
    ========================================================================== */
 
 .wrapper {
-	width: 900px;
-	margin: 0 auto;
+	width: 100%;
 	padding-bottom: 50px;
 	text-align: center;
 	font-size: 30px;
@@ -138,6 +137,14 @@ footer {
 	display: block;
 }
 
+hr {
+	max-width: 900px;
+	margin: 20px auto;
+}
+
+div.example {
+	padding: 10px 0;
+}
 
 div.top-bar {
 	border-bottom: 1px solid #444;
@@ -180,6 +187,80 @@ div.top-bar .left-bar a {
 
 div.top-bar .right-bar a {
 	border-left: 1px solid #dedede;
+}
+
+/* http://jsfiddle.net/louisbullock/et79Z/show */
+.button {
+	color: #595959;
+	text-shadow: 0 1px 0px rgba(255,255,255,1.0);
+	background-color: #fff;
+	background-image: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.089));
+	border-radius: 2px;
+	box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.7),0 1px 0px 0px rgba(0, 0, 0, 0.073);
+	border: 1px solid rgba(0,0,0,0.37);
+	cursor: pointer;
+	display: inline-block;
+	font-family: inherit;
+	font-size: 12px;
+	line-height: 12px;
+	margin: 0 -5px;
+	padding: 5px 12px;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-appearance: none;
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	-ms-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+}
+
+.button:hover {
+	background-color: #f6f6f6;
+	outline: none;
+}
+
+.button:focus {
+	/*box-shadow:0px 0px 10px 0px #13B0FA;*/
+	outline:none;
+}
+
+.button:active, .button.active {
+	background-color:#ddd;
+	background-image:-webkit-linear-gradient(rgba(0, 0, 0, .042), transparent);
+	box-shadow:inset 0px 1px 2px 0px rgba(0, 0, 0, 0.073);
+	outline: none;
+	-webkit-transition:none;
+	-moz-transition:none;
+	-ms-transition:none;
+	-o-transition:none;
+	transition:none;
+}
+
+div.design {
+	font-size: 12px;
+	color: gray;
+	margin: 13px 0;
+}
+
+div.design a {
+	color: #89c56d;
+	border-bottom: 1px dotted transparent;
+	font-weight: bold;
+	text-decoration: none;
+	-webkit-appearance: none;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+
+div.design a:hover {
+	color: #646366;
+	border-bottom: 1px dotted #646366;
 }
 
 /* ==========================================================================

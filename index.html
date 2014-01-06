@@ -14,9 +14,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/github.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
     <link href="src/numbars.css" rel="stylesheet">
@@ -45,37 +48,123 @@
 
         <iframe src="http://ghbtns.com/github-btn.html?user=needim&amp;type=follow&amp;count=true"
                 allowtransparency="true" frameborder="0" scrolling="0" width="152px" height="20px"></iframe>
-    <hr/>
-    <div>
-        <span id="numbars-green" class="numbars green" data-max="300">0</span>
-    </div>
-    <div class="info">
-        <pre><code data-language="html">&#x3C;span id="numbars-green" class="numbars green" data-max="300"&#x3E;0&#x3C;/span&#x3E;</code></pre>
-        <pre><code data-language="javascript">new Numbars(document.getElementById('numbars-green'), 120);</code></pre>
+    <!--<hr/>-->
+
+    <div class="example">
+        <div style="padding: 30px 0 20px 0; background-color: #1B1D21;">
+            <span id="numbars-darkgreener" class="numbars nu-darkgreener" data-max="600">0</span>
+        </div>
+        <div class="action-buttons" data-target-id="darkgreener">
+            <a class="button" data-action="pull"><i class="fa fa-hand-o-left"></i></a>
+            <a class="button" data-action="push"><i class="fa fa-hand-o-right"></i></a>
+        </div>
+        <div class="info">
+            <pre><code data-language="html">&#x3C;span id="numbars-darkgreener" class="numbars nu-darkgreener nu-covered" data-max="600"&#x3E;0&#x3C;/span&#x3E;</code></pre>
+            <pre><code data-language="javascript">new Numbars(document.getElementById('numbars-darkgreener'), 520);</code></pre>
+        </div>
+        <hr/>
     </div>
 
-    <hr/>
+    <div class="example">
+        <div>
+            <span id="numbars-lightgreener" class="numbars nu-lightgreener" data-max="600">0</span>
+        </div>
+        <div class="action-buttons" data-target-id="lightgreener">
+            <a class="button" data-action="pull"><i class="fa fa-hand-o-left"></i></a>
+            <a class="button" data-action="push"><i class="fa fa-hand-o-right"></i></a>
+        </div>
+        <div class="info">
+            <pre><code data-language="html">&#x3C;span id="numbars-lightgreener" class="numbars nu-lightgreener nu-covered" data-max="600"&#x3E;0&#x3C;/span&#x3E;</code></pre>
+            <pre><code data-language="javascript">new Numbars(document.getElementById('numbars-lightgreener'), 520);</code></pre>
+        </div>
 
-    <div>
-        <span id="numbars-red" class="numbars red" data-max="1000">0</span>
-    </div>
-    <div class="info">
-        <pre><code data-language="html">&#x3C;span id="numbars-red" class="numbars red" data-max="1000"&#x3E;0&#x3C;/span&#x3E;</code></pre>
-        <pre><code data-language="javascript">new Numbars(document.getElementById('numbars-red'), 208);</code></pre>
+        <hr/>
     </div>
 
-    <hr/>
+    <div class="example">
+        <div>
+            <span id="numbars-lightorange" class="numbars nu-lightorange" data-max="600">0</span>
+        </div>
+        <div class="action-buttons" data-target-id="lightorange">
+            <a class="button" data-action="pull"><i class="fa fa-hand-o-left"></i></a>
+            <a class="button" data-action="push"><i class="fa fa-hand-o-right"></i></a>
+        </div>
+        <div class="info">
+            <pre><code data-language="html">&#x3C;span id="numbars-lightorange" class="numbars nu-lightorange" data-max="600"&#x3E;0&#x3C;/span&#x3E;</code></pre>
+            <pre><code data-language="javascript">new Numbars(document.getElementById('numbars-lightorange'), 520);</code></pre>
+        </div>
 
-    <div>
-        <span id="numbars-blue" class="numbars blue" data-max="5000">1200</span>
+        <hr/>
     </div>
-    <div class="info">
-        <pre><code data-language="html">&#x3C;span id="numbars-blue" class="numbars blue" data-max="5000"&#x3E;1200&#x3C;/span&#x3E;</code></pre>
-        <pre><code data-language="javascript">new Numbars(document.getElementById('numbars-blue'), 4202);</code></pre>
+
+    <div class="example">
+        <div>
+            <span id="numbars-purple" class="numbars nu-purple" data-max="600">0</span>
+        </div>
+        <div class="action-buttons" data-target-id="purple">
+            <a class="button" data-action="pull"><i class="fa fa-hand-o-left"></i></a>
+            <a class="button" data-action="push"><i class="fa fa-hand-o-right"></i></a>
+        </div>
+        <div class="info">
+            <pre><code data-language="html">&#x3C;span id="numbars-purple" class="numbars nu-purple nu-covered" data-max="600"&#x3E;0&#x3C;/span&#x3E;</code></pre>
+            <pre><code data-language="javascript">new Numbars(document.getElementById('numbars-purple'), 520);</code></pre>
+        </div>
+
+        <hr/>
     </div>
+
+    <div class="example">
+        <div>
+            <span id="numbars-green" class="numbars nu-green" data-max="300">0</span>
+        </div>
+        <div class="action-buttons" data-target-id="green">
+            <a class="button" data-action="pull"><i class="fa fa-hand-o-left"></i></a>
+            <a class="button" data-action="push"><i class="fa fa-hand-o-right"></i></a>
+        </div>
+        <div class="info">
+            <pre><code data-language="html">&#x3C;span id="numbars-green" class="numbars nu-green" data-max="300"&#x3E;0&#x3C;/span&#x3E;</code></pre>
+            <pre><code data-language="javascript">new Numbars(document.getElementById('numbars-green'), 120);</code></pre>
+        </div>
+
+        <hr/>
+    </div>
+
+    <div class="example">
+        <div>
+            <span id="numbars-red" class="numbars nu-red" data-max="1000">0</span>
+        </div>
+        <div class="action-buttons" data-target-id="red">
+            <a class="button" data-action="pull"><i class="fa fa-hand-o-left"></i></a>
+            <a class="button" data-action="push"><i class="fa fa-hand-o-right"></i></a>
+        </div>
+        <div class="info">
+            <pre><code data-language="html">&#x3C;span id="numbars-red" class="numbars nu-red" data-max="1000"&#x3E;0&#x3C;/span&#x3E;</code></pre>
+            <pre><code data-language="javascript">new Numbars(document.getElementById('numbars-red'), 308);</code></pre>
+        </div>
+
+        <hr/>
+    </div>
+
+
+    <div class="example">
+        <div>
+            <span id="numbars-blue" class="numbars nu-blue" data-max="5000">1200</span>
+        </div>
+        <div class="action-buttons" data-target-id="blue">
+            <a class="button" data-action="pull"><i class="fa fa-hand-o-left"></i></a>
+            <a class="button" data-action="push"><i class="fa fa-hand-o-right"></i></a>
+        </div>
+        <div class="info">
+            <pre><code data-language="html">&#x3C;span id="numbars-blue" class="numbars nu-blue" data-max="5000"&#x3E;1200&#x3C;/span&#x3E;</code></pre>
+            <pre><code data-language="javascript">new Numbars(document.getElementById('numbars-blue'), 4202);</code></pre>
+        </div>
+
+    </div>
+
     <hr/>
     <footer>
         DEVELOPED IN ISTANBUL, TURKEY WITH <i class="love">LOVE</i> FOR OPENSOURCE.
+        <div class="design">Thanks to <a href="http://dribbble.com/serhatozirik" target="_blank">Serhat Özirik</a> for help about design.</div>
     </footer>
 </div>
 
@@ -85,10 +174,33 @@
 
 <script type="text/javascript">
     $(function () {
-        new Numbars(document.getElementById('numbars-green'), 120);
-        new Numbars(document.getElementById('numbars-red'), 208);
-        new Numbars(document.getElementById('numbars-blue'), 4202);
+        window.numbars = {};
+        window.numbars.lightorange = new Numbars(document.getElementById('numbars-lightorange'), 520);
+        window.numbars.darkgreener = new Numbars(document.getElementById('numbars-darkgreener'), 520);
+        window.numbars.lightgreener = new Numbars(document.getElementById('numbars-lightgreener'), 520);
+        window.numbars.purple = new Numbars(document.getElementById('numbars-purple'), 520);
+        window.numbars.green = new Numbars(document.getElementById('numbars-green'), 120);
+        window.numbars.red = new Numbars(document.getElementById('numbars-red'), 308);
+        window.numbars.blue = new Numbars(document.getElementById('numbars-blue'), 4202);
+
         Rainbow.color();
+
+        $('.action-buttons').on('click', 'a.button', function(e) {
+            var $this = $(this),
+                $parent = $this.parent(),
+                targetId = $parent.data('target-id'),
+                action = $this.data('action');
+
+                var numbar = window.numbars[targetId];
+
+                if (action == 'push') {
+                    numbar.set(numbar.lastNum + 100);
+                } else if (action == 'pull') {
+                    numbar.set(numbar.lastNum - 100);
+                }
+
+            e.preventDefault();
+        });
     });
 </script>
 

@@ -26,6 +26,8 @@ pre code {
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
     border-radius: 0px;
+	border: thin dotted #dedede;
+	padding: 5px 15px;
 }
 
 pre, code {
