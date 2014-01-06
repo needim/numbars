@@ -1,6 +1,8 @@
-numbars
+![numbars-logo](http://ned.im/assets/img/numbars-logo.png "numbars-logo")
 =======
 
-javascript number bars
+NUMBARS is a plugin for number visualization with bars.
 
-![numbars](http://ned.im/numbars/numbars.png "numbars")
+STILL IN DEVELOPMENT
+
+![numbars](http://ned.im/assets/img/numbars-preview.png "numbars")
