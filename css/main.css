@@ -133,6 +133,11 @@ footer {
 	text-indent: -9999px;
 }
 
+.logo {
+	margin: 20px auto;
+	display: block;
+}
+
 
 /* ==========================================================================
    Helper classes
