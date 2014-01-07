@@ -6,6 +6,7 @@
 	display: inline-block;
 	position: relative;
 }
+
 .numbars-progress {
 	display: block;
 	height: 100%;
@@ -13,23 +14,25 @@
 	position: relative;
 	overflow: visible;
 }
+
 .numbars-num {
 	position: absolute;
 	display: inline-block;
 	left: 5px;
 	top: -1px;
-	font-smooth:always;
+	font-smooth: always;
 	-webkit-font-smoothing: antialiased;
 }
-
 
 /* GREEN */
 .numbars.nu-green {
 	background-color: #F5F1EC;
 }
+
 .numbars.nu-green .numbars-progress {
-	background-color: rgba(137,184,76,.8);
+	background-color: rgba(137, 184, 76, .8);
 }
+
 .numbars.nu-green .numbars-num {
 	height: 20px;
 	line-height: 20px;
@@ -39,7 +42,7 @@
 	left: 0;
 	color: #fff;
 	font-weight: bold;
-	background-color: rgba(137,184,76,.8);
+	background-color: rgba(137, 184, 76, .8);
 	-moz-border-radius: 3px 3px 0 0;
 	-webkit-border-radius: 3px 3px 0 0;
 	border-radius: 3px 3px 0 0;
@@ -49,9 +52,11 @@
 .numbars.nu-red {
 	background-color: #F5F1EC;
 }
+
 .numbars.nu-red .numbars-progress {
 	background-color: rgba(204, 0, 0, 0.7);
 }
+
 .numbars.nu-red .numbars-num {
 	height: 20px;
 	line-height: 20px;
@@ -61,20 +66,21 @@
 	left: 0;
 	color: #fff;
 	font-weight: bold;
-	background-color: rgba(204,0,0,.7);
+	background-color: rgba(204, 0, 0, .7);
 	-moz-border-radius: 3px 3px 0 0;
 	-webkit-border-radius: 3px 3px 0 0;
 	border-radius: 3px 3px 0 0;
 }
 
-
 /* BLUE */
 .numbars.nu-blue {
 	background-color: #F5F1EC;
 }
+
 .numbars.nu-blue .numbars-progress {
 	background-color: rgba(42, 184, 232, 0.7);
 }
+
 .numbars.nu-blue .numbars-num {
 	height: 20px;
 	line-height: 20px;
@@ -90,22 +96,23 @@
 	border-radius: 3px 3px 0 0;
 }
 
-
 /* DARKGREENER */
 .numbars.nu-darkgreener {
 	background-color: #FEFDFA;
 	height: 24px;
 }
+
 .numbars.nu-darkgreener .numbars-progress {
 	background: #f1d000; /* Old browsers */
-	background: -moz-linear-gradient(left,  #f1d000 0%, #89c56d 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f1d000), color-stop(100%,#89c56d)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  #f1d000 0%,#89c56d 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  #f1d000 0%,#89c56d 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  #f1d000 0%,#89c56d 100%); /* IE10+ */
-	background: linear-gradient(to right,  #f1d000 0%,#89c56d 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1d000', endColorstr='#89c56d',GradientType=1 ); /* IE6-9 */
+	background: -moz-linear-gradient(left, #f1d000 0%, #89c56d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, #f1d000), color-stop(100%, #89c56d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #f1d000 0%, #89c56d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #f1d000 0%, #89c56d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #f1d000 0%, #89c56d 100%); /* IE10+ */
+	background: linear-gradient(to right, #f1d000 0%, #89c56d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1d000', endColorstr='#89c56d', GradientType=1); /* IE6-9 */
 }
+
 .numbars.nu-darkgreener .numbars-num {
 	height: 24px;
 	line-height: 24px;
@@ -119,6 +126,7 @@
 	font-weight: 700;
 	text-shadow: none;
 }
+
 .numbars.nu-darkgreener:before {
 	content: '0';
 	position: absolute;
@@ -127,31 +135,33 @@
 	color: #F5F1EC;
 	font-size: 10px;
 }
+
 .numbars.nu-darkgreener:after {
 	content: attr(data-max);
 	position: absolute;
-	top:-10px;
+	top: -10px;
 	right: 0;
 	color: #F5F1EC;
 	font-size: 10px;
 }
-
 
 /* LIGHTGREENER */
 .numbars.nu-lightgreener {
 	background-color: #F5F1EC;
 	height: 24px;
 }
+
 .numbars.nu-lightgreener .numbars-progress {
 	background: #f1d000; /* Old browsers */
-	background: -moz-linear-gradient(left,  #f1d000 0%, #89c56d 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f1d000), color-stop(100%,#89c56d)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  #f1d000 0%,#89c56d 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  #f1d000 0%,#89c56d 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  #f1d000 0%,#89c56d 100%); /* IE10+ */
-	background: linear-gradient(to right,  #f1d000 0%,#89c56d 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1d000', endColorstr='#89c56d',GradientType=1 ); /* IE6-9 */
+	background: -moz-linear-gradient(left, #f1d000 0%, #89c56d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, #f1d000), color-stop(100%, #89c56d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #f1d000 0%, #89c56d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #f1d000 0%, #89c56d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #f1d000 0%, #89c56d 100%); /* IE10+ */
+	background: linear-gradient(to right, #f1d000 0%, #89c56d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1d000', endColorstr='#89c56d', GradientType=1); /* IE6-9 */
 }
+
 .numbars.nu-lightgreener .numbars-num {
 	height: 24px;
 	line-height: 24px;
@@ -165,6 +175,7 @@
 	font-weight: 700;
 	text-shadow: none;
 }
+
 .numbars.nu-lightgreener:before {
 	content: '0';
 	position: absolute;
@@ -173,31 +184,33 @@
 	color: #ccc;
 	font-size: 10px;
 }
+
 .numbars.nu-lightgreener:after {
 	content: attr(data-max);
 	position: absolute;
-	top:-10px;
+	top: -10px;
 	right: 0;
 	color: #ccc;
 	font-size: 10px;
 }
-
 
 /* PURPLE */
 .numbars.nu-purple {
 	background-color: #F5F1EC;
 	height: 12px;
 }
+
 .numbars.nu-purple .numbars-progress {
 	background: #66cccc; /* Old browsers */
-	background: -moz-linear-gradient(left,  #66cccc 0%, #663399 99%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#66cccc), color-stop(99%,#663399)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  #66cccc 0%,#663399 99%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  #66cccc 0%,#663399 99%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  #66cccc 0%,#663399 99%); /* IE10+ */
-	background: linear-gradient(to right,  #66cccc 0%,#663399 99%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66cccc', endColorstr='#663399',GradientType=1 ); /* IE6-9 */
+	background: -moz-linear-gradient(left, #66cccc 0%, #663399 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, #66cccc), color-stop(99%, #663399)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #66cccc 0%, #663399 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #66cccc 0%, #663399 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #66cccc 0%, #663399 99%); /* IE10+ */
+	background: linear-gradient(to right, #66cccc 0%, #663399 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66cccc', endColorstr='#663399', GradientType=1); /* IE6-9 */
 }
+
 .numbars.nu-purple .numbars-num {
 	height: 12px;
 	line-height: 12px;
@@ -211,6 +224,7 @@
 	font-weight: 700;
 	text-shadow: none;
 }
+
 .numbars.nu-purple .numbars-num:after {
 	width: 1px;
 	height: 30px;
@@ -221,16 +235,17 @@
 	content: "";
 }
 
-
 /* LIGHTORANGE */
 .numbars.nu-lightorange {
 	background-color: #B5B6B5;
 	height: 4px;
 	border: none;
 }
+
 .numbars.nu-lightorange .numbars-progress {
 	background: #EA5424;
 }
+
 .numbars.nu-lightorange .numbars-num {
 	height: 26px;
 	line-height: 26px;
@@ -241,8 +256,93 @@
 	left: auto;
 	color: #658AC7;
 	background-color: rgba(255, 255, 255, 1) !important;
-	box-shadow: 0px 1px 1px 1px rgba(0,0,0,.2);
+	box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, .2);
 	border-radius: 3px;
 	font-weight: bold;
 	text-shadow: none;
+}
+
+/* GAMEBAR */
+.numbars.nu-gamebar {
+	background-color: #F5F1EC;
+	border: 2px solid #590C59;
+	height: 24px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.numbars.nu-gamebar:before {
+	content: "";
+	width: 300px;
+	height: 12px;
+	background-color: rgba(255, 255, 255, .3);
+	position: absolute;
+	display: block;
+	-webkit-border-radius: 20px 20px 10px 10px;
+	-moz-border-radius: 20px 20px 10px 10px;
+	border-radius: 20px 20px 10px 10px;
+	z-index: 16;
+}
+
+.numbars.nu-gamebar .numbars-progress {
+	background: #B518B5; /* Old browsers */
+	background: -moz-linear-gradient(left, #DE57D6 0%, #B518B5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, #DE57D6), color-stop(100%, #B518B5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #DE57D6 0%, #B518B5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #DE57D6 0%, #B518B5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #DE57D6 0%, #B518B5 100%); /* IE10+ */
+	background: linear-gradient(to right, #DE57D6 0%, #B518B5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DE57D6', endColorstr='#B518B5', GradientType=1); /* IE6-9 */
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.numbars.nu-gamebar .numbars-num {
+	height: 24px;
+	line-height: 24px;
+	font-size: 14px;
+	padding: 0 10px;
+	position: absolute;
+	top: 0;
+	left: 4px;
+	color: #fff;
+	font-weight: bolder;
+	text-shadow: none;
+}
+
+.numbars.nu-gamebar:after {
+	content: attr(data-max);
+	position: absolute;
+	top: -10px;
+	right: 0;
+	color: #444;
+	font-weight: bolder;
+	font-size: 10px;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+	text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
+/* RIGHT-TO-LEFT PROGRESS */
+.numbars.nu-right-to-left {
+	-webkit-transform: rotateY(180deg);
+}
+
+.numbars.nu-right-to-left .numbars-num {
+	-webkit-transform: rotateY(180deg);
+}
+
+.numbars.nu-right-to-left:before {
+	-webkit-transform: rotateY(180deg);
+}
+
+.numbars.nu-right-to-left:after {
+	-webkit-transform: rotateY(180deg);
+}
+
+.numbars.nu-purple.nu-right-to-left .numbars-num:after {
+	right: auto;
+	left: -1px;
 }
