@@ -1,61 +1,71 @@
 window.Numbars = function (element, num) {
 	num = num || 0;
 	this.element = element;
-	this.element.className += ' numbars';
-	if (typeof this.element.attributes['data-max'] == 'undefined') {
-		this.max = this.element.getAttribute('data-max');
-	} else {
-		this.max = this.element.attributes['data-max'].nodeValue;
-	}
-	this.element.innerHTML = '<span class="numbars-progress"><span class="numbars-num">' + this.element.innerHTML + '</span></span>';
-	this.element.style.visibility = 'visible';
-	this.isWorking = false;
+
+	if (!this.element.classList.contains('numbars'))
+		this.element.classList.add('numbars');
+
+	this.getData = function (name, def) {
+		if (typeof this.element.attributes[name] == 'undefined') {
+			return this.element.getAttribute(name) || def;
+		} else {
+			return this.element.attributes[name].nodeValue || def;
+		}
+	};
+
+	this.getCurrentNum = function () {
+		if (this.element.firstChild.firstChild.innerText) {
+			return parseInt(this.element.firstChild.firstChild.innerText);
+		} else if (this.element.firstChild.firstChild.textContent) {
+			return parseInt(this.element.firstChild.firstChild.textContent);
+		}
+		return 0;
+	};
+
+	this.setCurrentNum = function (num) {
+		if (this.element.firstChild.firstChild.innerText) {
+			this.element.firstChild.firstChild.innerText = num;
+		} else {
+			this.element.firstChild.firstChild.textContent = num;
+		}
+	};
 
 	this._set = function (num) {
 		var that = this, o, currentNum;
 
-		if (that.element.firstChild.firstChild.innerText) {
-			currentNum = parseInt(that.element.firstChild.firstChild.innerText);
-		} else {
-			currentNum = parseInt(that.element.firstChild.firstChild.textContent);
-		}
+		currentNum = that.getCurrentNum();
 
 		if (num > currentNum) {
-			currentNum++;
-			if (that.element.firstChild.firstChild.innerText) {
-				that.element.firstChild.firstChild.innerText = currentNum;
-			} else {
-				that.element.firstChild.firstChild.textContent = currentNum;
-			}
-			this.lastNum = currentNum;
-			o = (currentNum / that.max) * 100;
-			this.element.firstChild.style.width = o + '%';
-			clearTimeout(this.timer);
-			this.timer = setTimeout(function () {
-				that._set(num);
-			}, 1);
+			currentNum += that.increment;
+
+			if (currentNum > that.max)
+				currentNum = that.max;
+
 		} else if (num < currentNum) {
-			currentNum--;
-			if (that.element.firstChild.firstChild.innerText) {
-				that.element.firstChild.firstChild.innerText = currentNum;
-			} else {
-				that.element.firstChild.firstChild.textContent = currentNum;
-			}
-			this.lastNum = currentNum;
-			o = (currentNum / that.max) * 100;
-			this.element.firstChild.style.width = o + '%';
-			clearTimeout(this.timer);
-			this.timer = setTimeout(function () {
-				that._set(num);
-			}, 1);
+			currentNum -= that.increment;
+
+			if (currentNum < 0)
+				currentNum = 0;
+
 		} else {
 			this.isWorking = false;
 		}
 
+		that.setCurrentNum(currentNum);
+		that.lastNum = currentNum;
+		o = (currentNum / that.max) * 100;
+		that.element.firstChild.style.width = o + '%';
+
+		clearTimeout(that.timer);
+
+		that.timer = setTimeout(function () {
+			that._set(num);
+		}, 1);
+
 		return this;
 	};
 
-	this.forceSet = function(num) {
+	this.forceSet = function (num) {
 		if (this.element.firstChild.firstChild.innerText) {
 			this.element.firstChild.firstChild.innerText = num;
 		} else {
@@ -65,7 +75,7 @@ window.Numbars = function (element, num) {
 		this.element.firstChild.style.width = o + '%';
 	};
 
-	this.set = function(num) {
+	this.set = function (num) {
 		num = Math.floor(parseInt(num));
 
 		if (num > this.max) num = this.max;
@@ -75,7 +85,7 @@ window.Numbars = function (element, num) {
 			clearTimeout(this.timer);
 			this.forceSet(this.lastNum);
 			var that = this;
-			setTimeout(function() {
+			setTimeout(function () {
 				that._set(num);
 			}, 500);
 			return this;
@@ -85,6 +95,12 @@ window.Numbars = function (element, num) {
 			return this._set(num);
 		}
 	};
+
+	this.max = this.getData('data-max', 100);
+	this.increment = parseInt(this.getData('data-increment', 1));
+	this.element.innerHTML = '<span class="numbars-progress"><span class="numbars-num">' + this.element.innerHTML + '</span></span>';
+	this.element.style.visibility = 'visible';
+	this.isWorking = false;
 
 	return this.set(num);
 };
