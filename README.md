@@ -10,3 +10,6 @@ __STILL IN DEVELOPMENT!__
 **DEMO:** <http://ned.im/numbars>
 
 ![numbars](http://ned.im/assets/img/numbars-preview.png "numbars")
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/needim/numbars/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
